@@ -13,8 +13,8 @@ module Chessmate
       end
 
       def next_token
-        return if @ss.eos?
         @ss.skip(WHITESPACE)
+        return if @ss.eos?
 
         case
         when text = @ss.scan(STRING) ; [:STRING,  text]
