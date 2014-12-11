@@ -13,13 +13,13 @@ rule
     | tag_pair
     ;
   tag_pair
-    : '[' tag_name tag_value ']'
+    : '[' tag_name tag_value ']' { @handler.tag_pairs[val[1].downcase.to_sym] = val[2][1..-2] }
     ;
   tag_name
-    : SYMBOL { puts val[0].capitalize }
+    : SYMBOL
     ;
   tag_value
-    : STRING { puts val[0][1..-2] }
+    : STRING
     ;
   movetext
     : moves game_termination
@@ -36,10 +36,10 @@ rule
     | turn
     ;
   turn
-    : SYMBOL { puts val[0] }
+    : SYMBOL { @handler.movetext << val[0] }
     ;
   game_termination
-    : RESULT { puts val[0] }
+    : RESULT
     ;
 end
 

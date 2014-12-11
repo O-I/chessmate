@@ -71,9 +71,9 @@ racc_reduce_table = [
   2, 11, :_reduce_none,
   2, 12, :_reduce_none,
   1, 12, :_reduce_none,
-  4, 14, :_reduce_none,
-  1, 15, :_reduce_7,
-  1, 16, :_reduce_8,
+  4, 14, :_reduce_6,
+  1, 15, :_reduce_none,
+  1, 16, :_reduce_none,
   2, 13, :_reduce_none,
   2, 17, :_reduce_none,
   1, 17, :_reduce_none,
@@ -81,7 +81,7 @@ racc_reduce_table = [
   2, 20, :_reduce_none,
   1, 20, :_reduce_none,
   1, 21, :_reduce_15,
-  1, 18, :_reduce_16 ]
+  1, 18, :_reduce_none ]
 
 racc_reduce_n = 17
 
@@ -158,17 +158,14 @@ Racc_debug_parser = false
 
 # reduce 5 omitted
 
-# reduce 6 omitted
-
-def _reduce_7(val, _values, result)
- puts val[0].capitalize 
+def _reduce_6(val, _values, result)
+ @handler.tag_pairs[val[1].downcase.to_sym] = val[2][1..-2] 
     result
 end
 
-def _reduce_8(val, _values, result)
- puts val[0][1..-2] 
-    result
-end
+# reduce 7 omitted
+
+# reduce 8 omitted
 
 # reduce 9 omitted
 
@@ -183,14 +180,11 @@ end
 # reduce 14 omitted
 
 def _reduce_15(val, _values, result)
- puts val[0] 
+ @handler.movetext << val[0] 
     result
 end
 
-def _reduce_16(val, _values, result)
- puts val[0] 
-    result
-end
+# reduce 16 omitted
 
 def _reduce_none(val, _values, result)
   val[0]
