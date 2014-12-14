@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Chessmate::VERSION
   spec.authors       = ["Rahul Horé"]
   spec.email         = ["hore.rahul@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Ruby PGN parser}
+  spec.description   = %q{Chessmate parses PGN files into Ruby objects.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "racc"
+  spec.add_development_dependency "minitest"
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
 end
