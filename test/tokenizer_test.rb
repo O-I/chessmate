@@ -3,7 +3,7 @@ require 'chessmate/tokenizer'
 
 module Chessmate
   module PGN
-    class TestTokenizer < MiniTest::Unit::TestCase
+    class TestTokenizer < MiniTest::Test
 
       [
         [:STRING, '"F/S Return Match"'],
