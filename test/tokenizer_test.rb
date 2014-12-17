@@ -1,4 +1,3 @@
-require 'json'
 require 'minitest/autorun'
 require 'chessmate/tokenizer'
 
