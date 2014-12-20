@@ -31,10 +31,10 @@ module Chessmate
         [:RESULT, '1/2-1/2'],
         [:RESULT, '*'],
 
-        [:MOVE, '1'],
-        [:MOVE, '23'],
-        [:MOVE, '5.'],
-        [:MOVE, '42..'],
+        [:MOVE_NO, '1'],
+        [:MOVE_NO, '23'],
+        [:MOVE_NO, '5.'],
+        [:MOVE_NO, '42..'],
 
         [:NAG, '$1'],
         [:NAG, '$12'],

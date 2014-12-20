@@ -1,5 +1,5 @@
 class Chessmate::PGN::Parser
-token STRING SYMBOL RESULT MOVE NAG
+token STRING SYMBOL RESULT MOVE_NO NAG
 rule
   pgn_database
     : pgn_database pgn_game
@@ -29,7 +29,7 @@ rule
     | move
     ;
   move
-    : MOVE turns
+    : MOVE_NO turns
     ;
   turns
     : turns turn

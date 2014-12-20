@@ -93,7 +93,7 @@ racc_token_table = {
   :STRING => 2,
   :SYMBOL => 3,
   :RESULT => 4,
-  :MOVE => 5,
+  :MOVE_NO => 5,
   :NAG => 6,
   "[" => 7,
   "]" => 8 }
@@ -124,7 +124,7 @@ Racc_token_to_s_table = [
   "STRING",
   "SYMBOL",
   "RESULT",
-  "MOVE",
+  "MOVE_NO",
   "NAG",
   "\"[\"",
   "\"]\"",

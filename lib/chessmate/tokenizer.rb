@@ -4,7 +4,7 @@ module Chessmate
       STRING               = /"([[:print:]&&[^\\"]]|\\\\|\\")*"/
       SYMBOL               = /[a-zA-Z0-9_\w:\+=\-#]+/
       RESULT               = /(1\-0|0\-1|1\/2\-1\/2|\*)/
-      MOVE                 = /\d+\.*/
+      MOVE_NO              = /\d+\.*/
       NAG                  = /\$\d+/
       WHITESPACE           = /\s+/
 
@@ -17,12 +17,12 @@ module Chessmate
         return if @ss.eos?
 
         case
-        when text = @ss.scan(STRING) ; [:STRING,  text]
-        when text = @ss.scan(RESULT) ; [:RESULT,  text]
-        when text = @ss.scan(MOVE)   ; [:MOVE,    text]
-        when text = @ss.scan(SYMBOL) ; [:SYMBOL,  text]
-        when text = @ss.scan(NAG)    ; [:NAG,     text]
-        else char = @ss.getch        ; [char,     char]
+        when text = @ss.scan(STRING)  ; [:STRING,  text]
+        when text = @ss.scan(RESULT)  ; [:RESULT,  text]
+        when text = @ss.scan(MOVE_NO) ; [:MOVE_NO, text]
+        when text = @ss.scan(SYMBOL)  ; [:SYMBOL,  text]
+        when text = @ss.scan(NAG)     ; [:NAG,     text]
+        else char = @ss.getch         ; [char,     char]
         end
       end
     end
