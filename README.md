@@ -1,6 +1,6 @@
 # Chessmate
 
-TODO: Write a gem description
+Ruby PGN parser
 
 ## Installation
 
